@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------ CONFIGURAÇÕES DE RESET DE ESTILO ------------------------------------------------------ */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------------------------------------ ESTILIZANDO O NOSSO HTML -------------------------------------------------------- */
+
+section{
+    text-align: justify;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 20px;
+    display: block;
+    background-color: rgb(156, 156, 156);
+}
+
+article > h1{
+    color: rgb(40, 40, 40);
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2.1em;
+    padding-bottom: 5vh;
+}
+
+article  > code > pre{
+   margin-top: 5vh;
+   margin-bottom: 5vh;
+}
+
+article > ul {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+article > ul > li{
+    list-style: none;
+    margin-left: 50px;
+}
+
+iframe{
+    height: 60vh;
+    width: 60vw;
+    display: block;
+    margin: auto;
+}
+
+section.moldura-do-iframe{
+    background-color: rgb(33, 33, 242)
+}
+
+section > h1{
+    color: white;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    text-align: center;
+}

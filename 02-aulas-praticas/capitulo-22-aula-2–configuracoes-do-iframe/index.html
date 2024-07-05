@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Nossa primeira aula sobre iframes</title>
+</head>
+<body>
+    <section>
+        <article>
+            <h1>ANOTAÇÕES DA AULA:</h1>
+            
+            <p>Nessa aula nós vimos que nem todos os navegadores são compatíveis com o iframe. Dada essa questão, podemos alertar ao usuário se for o caso. Basta fazer nos exemplos anteriores das imagens dentro do picture: <br></p>
+            <code>
+            <pre>
+            &lt;iframe src="" frameborder="0"&gt;
+            mensagem de erro
+            ou coloca um link
+            &lt;/iframe&gt;
+            </pre>
+            </code>
+            
+            <p><strong>LEMBRETES: </strong></p>
+            <p><strong>O tamanho padrão de um iframe é 300wx150h</strong>. São 300 pixels de largura com 150 pixels de altura. <br>
+            Lembrese-se que isso é personalizável! Basta informar os valores de altura e largura dentro da tag ou no arquivo CSS. <br>
+            <strong>Nos iframes, há um parâmetro que podemos usar chamado de scrolling.</strong>Scroling tem três propriedades:</p>
+            <ul>
+                <li><strong><mark>Scrolling="yes"</mark></strong> → Permite a rolagem mesmo que todo o conteúdo do iframe caiba na tela exibida.</li>
+                <li><strong><mark>Scrolling="no"</mark></strong> → Não permite a rolagem do conteúdo do iframe na tela.</li>
+                <li><strong><mark>scrolling="auto</mark> </strong> → É o padrão. Esse atributo possibilita a rolagem automática de conteúdo na tela exibida.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="moldura-do-iframe">
+        <h1>Site do cursso em vídeo dentro da nossa página:</h1>
+        <iframe src="https://www.cursoemvideo.com/" frameborder="0" height="500px" width="500px" scrolling="yes"></iframe>
+    </section>
+
+
+</body>
+</html>
