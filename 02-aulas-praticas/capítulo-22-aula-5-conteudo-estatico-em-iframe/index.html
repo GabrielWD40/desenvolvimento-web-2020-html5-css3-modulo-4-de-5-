@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>UM APRENDIZADO INTERESSANTES DOS IFRAMES</h1>
+        <br>
+        <p>Nessa aula, nós aprendemos a como fazer um conteúdo local dentro do iframe. É bem zoado, mas é possível! Para isso, você <strong>precisará usar a tag srcdoc="" dentro do ifraame, e depois o conteúdo.</strong></p>
+        <p>Isso pode ser útil quando em casos como o exercício anterior, onde o iframe "fica esperando um conteúdo clicácel". Aqui você pode colocar alguma coisa para quando ele ainda não foi preenchido. é importante lembrar: <br><strong>USE ASPARAS SIMPLES (' ') para inserir imagens e estilos inline.</strong></p>
+
+        <iframe src="" frameborder="0" srcdoc="
+            <style>
+                body{
+                    background-color: lightblue;
+                    color: darkblue;
+                    text-align: center;
+                }
+            </style>
+
+            <h1>Iframe com conteúdo local</h1>
+            
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit aperiam, maiores voluptate consequuntur labore ut excepturi nobis qui ad a molestias laborum, enim nam id nulla quas animi harum iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquid veritatis facilis perferendis accusantium. Provident facere porro nemo quisquam soluta rem delectus tenetur incidunt sint vel! Nostrum quos sit voluptate!</p>
+            
+            <img style='width: 70%; ' src='https://images.pluto.tv/channels/62545c0b002f4b0007688b61/featuredImage.jpg'>" >
+        
+            <!-- Mensagem de incompatibilidade: -->
+             <p>Infelizmente, o seu navegador não é compatível com iframes. Tente em outro dispositivo com um naegador diferente.</p>
+        </iframe>
+
+
+        <code>
+            <pre>
+            <h1>código do iframe acima:</h1><br>
+        &lt;iframe src="" frameborder="0" srcdoc="
+            &lt;style&gt;
+                body{
+                    background-color: lightblue;
+                    color: darkblue;
+                    text-align: center;
+                }
+            &lt;/style&gt;
+
+            &lt;h1>Iframe com conteúdo local&lt;/h1&gt;
+            
+            &lt;p>Lorem ipsum, e encheção de linguição....&lt;/p&gt;
+            
+            &lt;img style='width: 70%; ' src='https://images.pluto.tv/channels/62545c0b002f4b0007688b61/featuredImage.jpg'&gt;" &gt;
+        
+            <!-- Mensagem de incompatibilidade: -->
+             &lt;p>Infelizmente, o seu navegador não é compatível com iframes. Tente em outro dispositivo com um naegador diferente.&lt;/p&gt;
+        &lt;/iframe&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

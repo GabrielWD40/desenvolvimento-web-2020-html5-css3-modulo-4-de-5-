@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    text-indent: 10px;
+}
+
+div.titulos{
+    text-align: center;
+    font-size: 1.4em;
+    font-variant: small-caps;
+    padding: 50px;
+    background-image: linear-gradient(to bottom, blue, lightblue);
+}
+
+article{
+    font-size: 1.2em;
+    padding: 30px;
+    background-color: lightblue;
+}
+
+ul > li{
+    margin-top: 2.5vh;
+    list-style-position: inside;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+p.paragrafo-das-listas{
+    margin-top: 2vh;
+    font-weight: bold;
+}
+
+
+
+

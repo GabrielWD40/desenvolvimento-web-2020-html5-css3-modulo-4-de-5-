@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt´-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Tornando iframes mais seguros</title>
+</head>
+<body>
+    <h1>SANDBOX e POLÍTICAS EM IFRAMES</h1>
+    <p>Nessa aula, nós vimos como deixar um iframe seguro. Isso evita que os dados de um usuários sejam capturados sem o seu consentimento. Para isso, vamos utilizar a propriedade <strong><em><u>SANDBOX</u></em></strong></p>
+    <p>SANDBOX é um ambiente virtual controlado, usado contra scripts maliciosos. Aqui o Sandbox irá desativar os scripts de captura de dados e quaisquer outras coisas que envolvam interação e fornecimento de dados.</p>
+
+    &lt; iframe &gt; src="caminho do que vc quer" name="um nome desse iframe" <strong>SANDBOX="sandbox"</strong> &lt;/iframe &gt;
+
+    <p>O código acima irá ativar a proteção máxima dentro desse iframe, quer dizer que você não vai conseguir enviar nada. Só vai poder visualizar mesmo. Se liga nesse exemplo: </p>
+    <iframe src="roubardados.html" frameborder="0" sandbox="sanbox" width="900px" height="500px" >
+        seu navegador não é compatível com iframes.
+    </iframe>
+
+    <h2>Repare que nesse exemplo completamente verdadeiro, o safado do zuckerberg é impedido de emprestar os seus dados sem que você saiba que foi emprestado. O atributo sandbox bloqueia tudo. Mas se não colocarmos, é isso que acontece:  </h2>
+    <iframe src="roubardados.html" frameborder="0" width="900px" height="500px" >
+        seu navegador não é compatível com iframes.
+    </iframe>
+
+    <p>Suas informações foram envidas. Tão lá com os chaina agora, que vão fazer propaganda da Shopee pra vc gastar dinheilinho.</p>
+    <hr>
+    <h1>OUTROS PARÂMENTROS DA SANDBOX:</h1>
+    <P>Se você reparar, vai ver que existem outros parâmetros para o atributo sandbox dentro do iframe. Como por exemplo: </P>
+
+    <ul>
+        <li><strong>Value</strong>: (sem valor)</li>
+        <li><strong>Descrição</strong>: Aplica todas as restrições</li>
+        <li><strong>allow-forms</strong>: Permite envio de formulários</li>
+        <li><strong>allow-modals</strong>: Permite abrir janelas modais</li>
+        <li><strong>allow-orientation-lock</strong>: Permite travar a orientação da tela</li>
+        <li><strong>allow-pointer-lock</strong>: Permite usar a API Pointer Lock</li>
+        <li><strong>allow-popups</strong>: Permite pop-ups</li>
+        <li><strong>allow-popups-to-escape-sandbox</strong>: Permite que pop-ups abram novas janelas sem herdar o sandboxing</li>
+        <li><strong>allow-presentation</strong>: Permite iniciar uma sessão de apresentação</li>
+        <li><strong>allow-same-origin</strong>: Permite que o conteúdo do iframe seja tratado como do mesmo origem</li>
+        <li><strong>allow-scripts</strong>: Permite executar scripts</li>
+        <li><strong>allow-top-navigation</strong>: Permite que o conteúdo do iframe navegue seu contexto de navegação de nível superior</li>
+        <li><strong>allow-top-navigation-by-user-activation</strong>: Permite que o conteúdo do iframe navegue seu contexto de navegação de nível superior, mas apenas se iniciado pelo usuário</li>
+    </ul>
+    
+
+    <p>Há como também, definir uma propriedade que impeça os dados de cookies de serem pegos por um iframe utilizando o seguinte comando: <strong>referrerpolicy="no-referrer"</strong></p>
+</body>
+</html>

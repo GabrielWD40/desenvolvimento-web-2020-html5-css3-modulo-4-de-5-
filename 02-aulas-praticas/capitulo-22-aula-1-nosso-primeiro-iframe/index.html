@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>NOSSO PRIMEIRO IFRAME</title>
+</head>
+<body>
+    <article>
+        <h1>Para que serve um iframe?</h1>
+        <br>
+        <p>Um iframe serve para você mostrar outros sites dentro da sua página. É como se fosse um  link, mas você acessa o conteúdo desse link dentro da sua própria página.<br>
+        <strong>Mas atenção: Não são todos os sites que vão rodar por iframes. Nem todas as funcionalidades vão funcionar nos iframes. Tudo isso é por questao de segurança!</strong><br>
+        A sintaxe do <strong>&lt;iframe&gt;</strong> é a seguinte: </p><br>
+
+        <code><pre>
+        &lt;iframe 
+            src="<strong style="text-decoration: underline;">link do site que você quer mostrar</strong>" frameborder="<strong style="text-decoration: underline;">tamanho da borda envolvente do iframe</strong>"
+            height="<strong style="text-decoration: underline;">altura</strong>" width="<strong style="text-decoration: underline;">largura</strong>" scrolling="<strong style="text-decoration: underline;">permissão de rolagem do conteúdo</strong>" &gt; 
+         &lt;iframe&gt;
+        </pre></code>
+
+        <aside>
+            <P>Nas próximas aulas, nós vamos ver um pouco mais sobre as questões de segurança, configurações em detalhes. Mas por hora, olhe os exemplos abaixo:</P>
+        </aside>
+    </article>
+    <section class="iframes">
+        <div class="titulo-do-iframe">
+            <h1 style="color: pink;">Site do estudonauta</h1>
+            <br>
+            <iframe src="https://estudonauta.com" frameborder="0" height="600px" width="400px"></iframe>
+        </div>
+        <div class="titulo-do-iframe">
+            <h1 style="color: blue">Site do curso em vídeo</h1>
+            <br>
+            <iframe src="https://cursoemvideo.com" frameborder="0" height="600px" width="400px"></iframe>
+        </div>
+        <div class="titulo-do-iframe">
+            <h1 style="color: lightgreen;">Meu primeiro site </h1>
+            <br>
+            <iframe src="https://gabrielwd40.github.io/Projeto-android--curso-em-video/" frameborder="0" height="600px" width="400px"></iframe>
+        </div>
+        <div class="titulo-do-iframe">
+            <h1>Site do Mercado Livre</h1>
+            <br>
+            <iframe src="https://www.mercadolivre.com.br/" frameborder="0" height="600px" width="400px"></iframe>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Navegação no Iframe</title>
+</head>
+<body>
+    <header>
+        <h1>NAVEGAÇÃO EM IFRAMES</h1>
+        <p>Nessa aula, nós falaremos sobre navegações em iframes. Como o nosso iframe irá mostrar um conteúdo de um link clicável que vai mundando de acordo com os cliques do usuário.</p>
+        <p>Para fazermos isso, quando definirmos o endereçamento de clique do link <strong>precisaremos colocar o target = <em>NOME DO IFRAME</em></strong>.</p>
+
+        <code>
+    <pre><br>
+    <strong><mark>&lt;a href="" <u>target="ESSE-É-O-NOME-DESSE-IFRAME"</u>&gt;&lt;/a&gt;</mark></strong>
+    <br>
+    &lt;iframe frameborder="0" scrolling="yes" <strong>name="ESSE-É-O-NOME-DESSE-IFRAME"</strong> &gt; &lt;/iframe &gt; <br>
+    </pre>
+        </code>
+        <p>Agora toda a vez que você clicar nesse link, ele vai abrir dentro desse iframe que possui o atributo name = "ESSE-É-O-NOME-DESSE-IFRAME". <strong>Você não precisa colocar o src (source) neste iframe, ok? Só o name já basta.</strong></p>
+        <br>
+        <p>Nos exemplos abaixo, vaja que legal a transição de mundaças que ocorre quando você clica nos links.</p>
+    </header>
+    <main>
+        <h1>Faça uma escolha</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae repellat eum alias nesciunt. Provident fuga quisquam soluta incidunt. Asperiores mollitia inventore maiores eligendi voluptatem adipisci ipsa tenetur quisquam dignissimos provident!</p>
+        <br>
+        <ul>
+            <li><a href="https://cursoemvideo.com" target="frame-de-exibicao">Primeira página</a></li>
+            <li><a href="https://gabrielwd40.github.io/Projeto-cordel--curso-em-video/" target="frame-de-exibicao">Segunda página</a></li>
+            <li><a href="https://gabrielwd40.github.io/Projeto-android--curso-em-video/" target="frame-de-exibicao">Terceira página</a></li>
+        </ul>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officiis eligendi voluptate! Praesentium, explicabo modi provident commodi, eaque deserunt repellat voluptatibus nisi aperiam ducimus, eos quis error est debitis illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere minus aut vitae unde eum eligendi, rem vero commodi praesentium perspiciatis necessitatibus maiores explicabo, dolorum, cum vel recusandae officia quo obcaecati!</p>
+        <iframe name="frame-de-exibicao" frameborder="0">
+            <!-- mensagem de erro em caso de incompatibilidade -->
+             <p>Infelizmente, seu navegador não é compatível com iframes! </p>
+        </iframe>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officiis eligendi voluptate! Praesentium, explicabo modi provident commodi, eaque deserunt repellat voluptatibus nisi aperiam ducimus, eos quis error est debitis illo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere minus aut vitae unde eum eligendi, rem vero commodi praesentium perspiciatis necessitatibus maiores explicabo, dolorum, cum vel recusandae officia quo obcaecati!</p>
+    </main>
+</body>
+</html>
