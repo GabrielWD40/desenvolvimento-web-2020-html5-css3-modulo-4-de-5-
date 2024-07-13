@@ -10,12 +10,16 @@
 </head>
 <body>
     <h1>SANDBOX e POLÍTICAS EM IFRAMES</h1>
-    <p>Nessa aula, nós vimos como deixar um iframe seguro. Isso evita que os dados de um usuários sejam capturados sem o seu consentimento. Para isso, vamos utilizar a propriedade <strong><em><u>SANDBOX</u></em></strong></p>
-    <p>SANDBOX é um ambiente virtual controlado, usado contra scripts maliciosos. Aqui o Sandbox irá desativar os scripts de captura de dados e quaisquer outras coisas que envolvam interação e fornecimento de dados.</p>
+    <p>Nessa aula, nós vimos como deixar um iframe seguro. <br>
+        Isso evita que os dados de um usuários sejam capturados sem o seu consentimento. <br>
+        Para isso, vamos utilizar a propriedade <strong><em><u>SANDBOX</u></em></strong></p>
+    <p>SANDBOX é um ambiente virtual controlado, usado contra scripts maliciosos. <br>
+       Aqui o Sandbox irá desativar os scripts de captura de dados e quaisquer outras coisas que envolvam interação e fornecimento de dados.</p>
 
     &lt; iframe &gt; src="caminho do que vc quer" name="um nome desse iframe" <strong>SANDBOX="sandbox"</strong> &lt;/iframe &gt;
 
-    <p>O código acima irá ativar a proteção máxima dentro desse iframe, quer dizer que você não vai conseguir enviar nada. Só vai poder visualizar mesmo. Se liga nesse exemplo: </p>
+    <p>O código acima irá ativar a proteção máxima dentro desse iframe, quer dizer que você não vai conseguir enviar nada. Só vai poder visualizar mesmo. <br>
+        Se liga nesse exemplo: </p>
     <iframe src="roubardados.html" frameborder="0" sandbox="sanbox" width="900px" height="500px" >
         seu navegador não é compatível com iframes.
     </iframe>
