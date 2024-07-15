@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>MÉTODO GET e POST EM FORMULÁRIOS</title>
+</head>
+<body>
+    <h1>Anotações sobre a aula</h1>
+    <p>Vimos que os fourmulários possuem 2 métodos: <strong>GET e POST.</strong><br>
+        O método GET permite que os dados inseridos nas nas inputs sejam vistos na URL, Já o método POST oculta esses dados da URL. <br>
+        <strong>ENTRETANTO: NENHUM DELES É SEGURO! Ambos usam protocolo HTPP.</strong><br>
+        Por padrão, os formulários vem com o método GET, mas é bem simples de mudar. Basta fazer: 
+    </p>
+ 
+    <code>
+    <pre>
+
+        &lt; form action="" method="get" → mude para 'post'... autocomplete="off" &gt; 
+        
+        &lt;/form&gt;7
+
+    </pre>
+    </code>
+     
+    <article>
+        <h2>MAS, QUANDO USAR CADA TIPO??</h2>
+        <p>Método GET → Use quando for coletar dados que não sejam sensíveis: Nome, peso, altura, cor preferida, nome do cachorro... BObeiras que não prejudiquem o usuário</p>
+        <p>Método POST → Use para dados sensíveis, como senhas, endereços, fotos, cartões de crédito e coisas que se vazarem, podem foder com a vida de alguém.</p>
+        <aside>
+            <h3>Curiosidade:</h3>
+            <p>Se você enviar dados por um formulário usando o método GET, você só pode envia até 3mil bytes.É como se fosse três mil letras.</p>
+            <br>
+            <P>APRENDA SOBRE HTTPS MAIS TARDE, FORMULÁRIOS DEPENDEM DELES.</P>
+        </aside>
+    </article>
+</body>
+</html>

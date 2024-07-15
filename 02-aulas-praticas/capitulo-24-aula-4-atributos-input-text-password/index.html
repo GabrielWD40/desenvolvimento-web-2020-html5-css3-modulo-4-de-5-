@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Novos atributos em inputs</title>
+</head>
+<body>
+    <h1>Anotações sobre a auala:</h1>
+
+    <p>Nessa aula, nós vimos algumas melhorias muito legais sobre os formulários em HTML. Vimos <br> 
+        <strong><ul>
+            <li>Como deixar um campo com preenchimento obrigatório:<mark> REQUIRED</mark></li>
+            <li>Como impor um tamanho mínimo/máximo de caracteres:<mark> MIN-LENGTH e MAX-LENGTH</mark></li>
+            <li>Como colocar um <mark>input tipo PASSAWORD</mark></li>
+            <li>Como colocar um <mark>botão que limpa todos os campos do formulário: INPUT RESET</mark></li>
+            <li>Atributo <mark>SIZE:Mostra quantos caracteres o input vai mostrar por vez</mark> </li>
+            <li><mark>Tag placeholder:</mark> Vai dentro das inputs e fornece uma "dica" do que é para ser preenchido naquele lugar.</li>
+            <li><mark>autocomplete dentro de inputs: </mark>Aqui você pode dizer que tipo de input é esse, se é de senha, nome de usuário... Isso ajuda o autocomplete do navegador e facilita pro usuário.</li>
+        </ul></strong> <br>
+
+    <strong>Nós colocamos esses atributos dentro dos inputs, ok? SEMPRE DENTRO DOS INPUTS.  </strong> <br> 
+    Repare que se você tentar enviar um campo que esteja com REQUIRED, ele não vai deixar e pedirá para preenche-lo. <br>
+    Além disso, ele vai dar um aviso quando o usuario digitar nomes acima ou abaixo do limite de caracteres preestabelecidos. <br>
+    Repare que quando utilizmos o atributo size dentro das inputs, o tamanho visual delas é diminuido e, a quantidade de caracteres que ela mostra também é menor. Ele cria uma rolagem lateral para quando o dado for maior... <br>
+    Uma coisa bem legal que vimos é sobre o autocomplete dentro das inputs. Você precisa estar com o autocomplete habilitado dentro da tag form para isso. Depois, você vai dentro duma input e colocar o autocomplete e o tipo dela, o navegador vai recomendar com base no histórico do usuário.
+    </p>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome" required minlength="3" maxlength="15" size="10" placeholder="digite seu nome" autocomplete="username">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="isobrenome" required minlength="3" maxlength="30" size="15" placeholder="digite seu sobrenome" autocomplete="username">
+        </p>
+        <p>
+            <label for="iuser">Digite um nome de usuário: </label>
+            <input type="text" name="user" id="iuser" required minlength="8" maxlength="10" size="10" placeholder="ex: joao123" autocomplete="nickname">
+        </p>
+        <p>
+            <label for="isenha">Digite uma senha: </label>
+            <input type="password" name="senha" id="isenha" required minlength="" maxlength="20" size="13" placeholder="mínimo de 8 letras" autocomplete="current-password">
+        </p>
+
+        <p>
+            <input type="submit" value="enviar dados">
+            <input type="reset" value="Limpar dados">
+        </p>
+    </form>
+
+    <p>Nessa aula vimos que a tag input tem muitos controles, mas no código, tem vários atribuos que nospermitem controlar melhor a entrada de dados.</p>
+</body>
+</html>

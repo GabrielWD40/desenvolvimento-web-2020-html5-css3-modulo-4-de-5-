@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Atributos time, date e month formulários</title>
+</head>
+<body>
+    <h1>Anotações da aula: </h1>
+    <p>Nessa aula nós vimos mais atributos que podem ser postos dentro dos inputs, como 
+        <strong><ul>
+            <li><mark>month →</mark> faz com que o input seja do tipo mês e ano (ex: 07/2020)</li>
+            <li><mark>date →</mark> faz com que o input seja uma data completa, com dia, mês e ano.</li>
+            <li><mark>time →</mark> faz com que o input colete dados no fortmato de horas</li>
+            <li><mark>number →</mark> faz com que o input colete dados somente em formatos de números</li>
+        </ul></strong> </p>
+
+
+        <h2>Cadastro de consulta de paciente</h2>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome" autocomplete="name" minlength="3" maxlength="15" placeholder="digite seu nome completo" required >
+            </p>
+            <p>
+                <label for="inascimento">Data de nascimento: </label>
+                <input type="date" name="nascimento" id="inascimento" required placeholder="informe sua data de nascimento" value="2000-02-02">
+            </p>
+            <p>
+                <label for="ipeso">Informe o seu peso em KG: </label>
+                <input type="number" name="peso" id="ipeso" required placeholder="Max 200kg" step="0.1" min="1" max="200">
+            </p>
+            <p>
+                <label for="imes">Selecione o mês da consulta:</label>
+                <input type="month" name="" id="" required value="2024-07">
+            </p>
+            <p>
+                <label for="ihorario">Selecione o horário: </label>
+                <input type="time" name="horario" id="ihorario" required value="14:30">
+            </p>
+
+            <p>
+                <input type="submit" value="enviar dados">
+                <input type="reset" value="limpar dados">
+            </p>
+        </form>
+
+
+        <p>No campo do formulário <strong>
+            <mark><em>data de nascimento</em></mark>
+        , é possível pressetar um valor com a propriedade "value"</strong> e depois arrumar com JS para não ficar manual. <br>
+        Propriedade <strong><mark><em>"STEP" em campos de números determina a escala de cresciento, se vai ser em 1 em 1, ou em 0.5 em 0.5...</em></mark></strong>. <br>É importante saber a escola para que o campo aceite os valores. Por padrão, ele cresce em 1 em 1 e não aceita decimais. <br>
+        <br>
+        <strong>O formato que os dados de data e month vão é: ano-mes-dia. Ok? Não se esqueça. <br></strong>
+        Alguns dados já estão preenchidos por conta do atributo value. <br>
+        Aém disso, algumas coisas podem funcionar em uns e em outros não. Para isso, pesquise sempre. <br>
+        <strong>Nos campos de números podemos definir um limite com as <mark>propriedades min e max</mark></strong>
+        </p> 
+</body>
+</html>

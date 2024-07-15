@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulários com label´s</title>
+</head>
+<body>
+    <h1>Anotações sobre a aula:</h1>
+    <p>Uma coisa muito legal que aprendemos logo de cara é o autocomplete dos formulários, que as vezes, enchem o saco. Sabe quando ele fica jogando milhares de opções de preenchimento? Vamos tirar isso usando o atributo <strong>"autocomplete=off" dentro da tag de abrtura do formulário.</strong></p>
+    <p>Uma label é uma etiqueta de uma input, ela serve para descrever o que se espera daquela input. Tipo, nome, idade, endereço...</p>
+
+    <p>Se lembra que falamos que toda a input deve ter um <strong>name e um ID</strong>? Isso acontece por conta do atributo name ser bem útil para o PHP/HTML, enquanto o atributo ID é bem útil para o JavaScript e para os usos de label.</p>
+
+    <p>O atributo label dá um único atributo, o <strong>for="nome da id do campo que ele representa</strong></p>
+
+    <code>
+    <pre>    
+        &lt;form <strong>action="nome-do-arquivo-que vão-esses-dados"</strong> autocomplete="off/on" &gt;
+            Nota: Autocomplete="on" → mantém o autocomplete ativado. Autocomplete="off" → desliga o autocomplete.    
+        
+            &lt;p&gt; 
+                &lt;label <strong>for="nome da id que essa etiqueta representa"</strong>&gt; DESCRIÇÃO DA EQUIQUETA &lt;/label&gt;
+                &lt;input <strong>type="text" name="nomedessa input" id="ID dessa input"</strong>&gt;
+                
+                Nota sobre os inputs: Existem inputs de senhas, datas, tempo, textos... Além disso, os campos nome e ID podem ser IGUAIS ou diferentes, basta não se confundir na hora de fasr referência. 
+                Você tem que preencher, ok? Para que as referências entre label e input estejam certas!
+            &lt;/p&gt;
+
+            &lt;input type="submit" value="NOME DESSE INPUT"&gt;
+            O input acima irá enviar esses dados para o arquivo setado em "action" no cabeçaho do formulário.
+
+        &lt;/form&gt;
+    </pre>
+    </code>
+
+    <hr>
+   <form action="cadastro.php" autocomplete="off">
+    <p><label for="inome">Digite um nome:</label>
+       <input type="text" name="nome" id="inome">
+    </p>
+    <p>
+        <label for="isobrenome">Digite um sobrenome: </label>
+        <input type="text" name="sobrenome" id="isobrenome">
+    </p>
+    <input type="submit" value="enviar">
+   </form> 
+   <br>
+   <P>MAS, SE LIGA NA FALTA DE SEGURANÇA QUE ISSO PODE PASSAR PARA OS NOSSOS CLIENTES. OLHA NA BARRA DE PESQUISA E VEJA QUE OS DADOS DOS CAMPOS ESTÃO LÁ;</P>
+   <picture>
+    <source media="(max-width: 800px)" srcset="img-pqna.png">
+    <img src="image.png" alt="print da tela mostrando uma falha de segurança nos formulários.">
+   </picture>
+</body>
+</html>
