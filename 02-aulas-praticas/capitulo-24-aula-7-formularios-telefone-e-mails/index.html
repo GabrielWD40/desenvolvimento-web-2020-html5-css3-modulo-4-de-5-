@@ -13,32 +13,64 @@
     <p>Nessa aula nós falamos sobre os campos de telefone e email dentro de um formulário. Para usar telefones, use o input tipo tel e com os e-mails, use o tipo e-mail. <br>
     Se você quiser usar uma input do tipo telefone, use o input tipo telefone e depois use o G </p>
 
-    <form action="" method="post">
-        <p>
-            <label for="inome">Digite o seu nome: </label>
-            <input type="text" name="nome" id="inome" required maxlength="20" minlength="3" atocomplete="name" placeholder="Ex: João">
-        </p>
-        <p>
-            <label for="idataaniversario">Dia e horário de nascimento</label>
-            <input type="datetime-local" name="dataaniversario" id="idataaniversario" required>
-        </p>
-        <p>
-            <label for="iidade">Digite a sua idade:</label>
-            <input type="number" name="idade" id="iidade" required max="120" min="1" step="1" value="18">
-        </p>
-        <p>
-            <label for="itelefone">Digite seu número:</label>
-            <input type="tel" name="telefone" id="itelefone" required maxlength="11" autocomplete="tel">
-        </p>
-        <p>
-            <label for="iemail">Digite o seu e-mail:</label>
-            <input type="email" name="email" id="iemail" required maxlength="60" autocomplete="email" placeholder="exemplo@dominio.com">
-        </p>
+    <p>Vimos que no campo telefone, é possível usar uma propriedade chamada de  <strong><u><mark>REGEX</mark></u></strong> para definirmos o estilo padrão de como os dados se comportarão. <br>
+        Sabe quando queremos que o modelo fique (xx) x xxxx - xxxx? Então, o RegEx serve para isso. Dentro do input, devemos colocar a propriedade <strong>pattern=""</strong> <br> <br>
 
-        <p>
-            <input type="submit" value="enviar dados">
-            <input type="reset" value="limpar dados">
-        </p>
+        O RegEx funciona da seguinte maneira: 
+        <code>
+        <pre>
+
+        entre colchetes [ ] → Você coloca o intervalo inicial - intervalo final. Ex: [a - z], [0 - 9]... 
+            Acima, quero dizer que o intervalo irá de 'a' até 'z' ou então, de '0' até '9'.
+        
+        Depois, entre chaves { } → Você coloca a quantidade de vezes que o campo terá. Ex: [0-9]{5}
+            Acima, estou querendo dizer que o campo em questão terá cinco números de 0 à 9.
+
+
+        No caso de uma input detelefone, eu faria o seguinte: 
+
+        &lt;label for="itelefone"&gt;Preencha o seu número: &lt;/label&gt;
+        &lt;input type="tel" name="telefone" id="itelefone" required autocomplete="tel" <strong>pattern:^[0-9]{2} [0-9]{5}-[0-9]{4} $</strong> placeholder="52 98765-4321" &gt;
+
+        Isso seria útil para orientar o usuário!
+        Lembrete: use '^' para simbolizar o início da expressão e '$' para simbolizar o fim dela.
+        </pre>
+        </code>
+        <br>
+        <mark>OUTRA COISA LEGAL: O agrupamento de recolhimento de informações com a tag <strong>FIELDSET</strong></mark>
+        <br>
+        Olha essa borda que foi feita em volta do nosso formulário, ela é o <strong>FIELDSET.</strong> Ela agrupa elementos com a mesma finalidade, aquele escritinho ali é dado pela tag <strong><mark>&lt;legend&gt;</mark></strong> dentro do &lt;fieldset&gt;
+    </p>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="inome">Digite o seu nome: </label>
+                <input type="text" name="nome" id="inome" required maxlength="20" minlength="3" autocomplete="username" placeholder="Ex: João">
+            </p>
+            <p>
+                <label for="idataaniversario">Dia e horário de nascimento</label>
+                <input type="datetime-local" name="dataaniversario" id="idataaniversario" required>
+            </p>
+            <p>
+                <label for="iidade">Digite a sua idade:</label>
+                <input type="number" name="idade" id="iidade" required max="120" min="1" step="1" value="18">
+            </p>
+            <p>
+                <label for="itelefone">Digite seu número:</label>
+                <input type="tel" name="telefone" id="itelefone" required minlength="11" maxlength="13" autocomplete="tel" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 98765-4321">
+                <!-- ESTUDAR SOBRE ReGex -->
+            </p>
+            <p>
+                <label for="iemail">Digite o seu e-mail:</label>
+                <input type="email" name="email" id="iemail" required maxlength="60" autocomplete="email" placeholder="exemplo@dominio.com">
+            </p>
+            <p>
+                <input type="submit" value="enviar dados">
+                <input type="reset" value="limpar dados">
+            </p>
+        </fieldset>
     </form>
 </body>
 </html>
