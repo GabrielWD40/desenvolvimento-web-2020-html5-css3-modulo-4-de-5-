@@ -11,7 +11,72 @@
 <body>
     <article>
         <h1>Anotações da aula: </h1>
-        <p>Nessa aula nós falamos sobre </p>
+        <p>Nessa aula nós falamos sobre como fazer as três coisas abaixo:
+            <ul>
+                <li>Como fazer um controle de cores RGB com input.</li>
+                <li>Sistema de controle de tamanho com range.</li>
+                <li>Input para o envio de arquivos por formulários.</li>
+            </ul>
+
+            Para fazermos cada um desses elementos, vamos precisar fazer um formulário com os seguintes atributos: 
+            <code>
+                <pre>
+        &lt;form action="" method="post"&gt;
+            &lt;p&gt;<strong>SELETORES DE COR EM FORMULÁRIOS:</strong>
+
+                &lt;label for="id-da-input"&gt; Nome da etiqueta label: &gt;
+                &lt;input type="color" name="nome-da-input" id="id-da-input"&gt;
+
+                    *Se você quiser que ela comece com uma cor, basta colocar value="cor desejada em hexadecimal #+código"
+            &lt;/p&gt;
+            <hr>    
+
+            &lt;p&gt;<strong>CONTROLE DE TAMANHO COM RANGE:</strong>
+            
+                &lt;label for="id-da-input"&gt; Nome da etiqueta label: &gt;
+                &lt;input type="range" name="nome-da-input" id="id-da-input"&gt;
+
+                    *Você pode definir um valor inicial e um valor final com os atributos <mark>min e max.</mark>
+                    *Além disso, também é possível definir um valor com value, desde que, ele esteja entre o intervalo estabelecido. 
+                    *Por padrão, esse intervalor é de 1 a 100 e a bolinha sempre começa no meio.
+            &lt;/p&gt;
+            <hr>
+        
+            &lt;p&gt;<strong>ENVIO DE ARQUIVOS:</strong>
+            
+            &lt;label for="id-da-input"&gt; Nome da etiqueta label: &gt;
+            &lt;input type="file" name="nome-da-input" id="id-da-input"&gt;
+
+                *<mark>input para o envio de arquivos. <strong>O formulário deve estar em método post, senão da erro.</strong></mark>
+            &lt;/p&gt;
+
+        &lt;/form&gt;
+                </pre>
+            </code>
+        </p>
+        <hr>
+
+
+        <form action="" method="post" autocomplete="on">
+            <p>
+                <label for="icor">Selecione uma cor: </label>
+                <input type="color" name="cor" id="icor" value="#ff5500">
+            </p>
+
+            <p>
+                <label for="inivel">Nível de satisfação: </label>
+                <input type="range" name="nivel" id="inivel">
+
+                <br>
+                <label for="inivelderaiva">Seu nível de raiva: </label>
+                <input type="range" name="nivelderaiva" id="innivelderaiva" min="1" max="10" step="1" value="4">
+            </p>
+
+            <p>
+                <label for="ifile">Envie um arquivo: </label>
+                <input type="file" name="file" id="ifile">
+            </p>
+        </form>
     </article>
 </body>
 </html>

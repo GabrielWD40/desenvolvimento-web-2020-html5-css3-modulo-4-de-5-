@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Select, datalist e textarea</title>
+</head>
+<body>
+    <h1>ANOTAÇÕES DA AULA: </h1>
+    <p>Nessa aula nós falamos sobre uma coisa que eu queria aprender há muito tempo: os formulários com várias opções.<br>
+    Vimos que para usar uma lista de opções pré-definidas pelo desenvolvedor, é necessário usar:
+    <code>
+    <pre>
+        <mark>Você tem que usar a tag <strong>&lt;SELECT&gt; → &lt;OPTION&gt;</strong>, só assim vai funcionar. </mark>
+        <mark>Você pode usar um agrupador de opções, organizando melhor o nosso código. <strong>USE A TAG &lt;OPTGROUP&gt;</strong></mark>
+        <mark><strong>Dentro da tag &lt;optgroup&gt; você pode colocar uma LABEL</strong>, ela será o nome daquele agrupamento.</mark>
+
+        <strong>EXEMPLO DE LISTA PRÉESTABELECIDA:</strong>  
+        &lt;label for="Icomidas"&gt;
+        &lt;select name="comidas" id="Icomidas"&gt;
+            &lt;optgroup label="Nome do agrupamento"&gt; → organiza as opções em grupos.
+                &lt;option value="alcatra"&gt; Alcatra &lt;/option&gt;
+                &lt;option value="bife"&gt; Bifão  &lt;/option&gt;
+                &lt;option value="costela"&gt; Costela  &lt;/option&gt;
+                &lt;option value="Frango"&gt; Franguin  &lt;/option&gt;
+                &lt;option value="linguiça"&gt; Linguiça  &lt;/option&gt;
+            &lt;optgroup&gt;
+            &lt;optgroup label="frutas"&gt; 
+                &lt;option value="Banana"&gt; Banana &lt;/option&gt;
+                &lt;option value="Maça"&gt; Maça &lt;/option&gt;
+                &lt;option value="Melancia"&gt; Melancia &lt;/option&gt;
+                &lt;option value="Ponkan"&gt; Ponkan &lt;/option&gt;
+                &lt;option value="Morango"&gt; Morango &lt;/option&gt;
+            &lt;/optgroup&gt;
+
+        &lt;/select&gt;
+
+
+        <strong>EXEMPLO DE INPUT DE TEXTO COM OPÇÕES:</strong>
+        &lt;label for"ilista-de-profissao"&gt;Digite a sua profissão: &lt;/label&gt;
+        &lt;input type="text" name="lista-de-profissao" id="ilista-de-profissao" placeholder="Ex: Frentista" <strong><mark>list="nome de lista de sugestões"</mark></strong>&gt;
+        
+        <strong><mark>&lt;datalist id="ID DO ATRIBUTO LIST DO INPUT DESEJADO"&gt;</mark></strong>
+            &lt;option value="valor"&gt;nome da opção&lt;/option&gt;
+            &lt;option value="desocupado"&gt;Estudante&lt;/option&gt;
+            &lt;option value="vadio"&gt;Vagabundo&lt;/option&gt;
+            &lt;option value="artigo 171"&gt;Do corre&lt;/option&gt;
+        &lt;/datalist&gt;
+
+            *Pra usar essa opção com sugestões de opções, você precisará usar o datalist e dentro dele, informar o ID do atributo list que está dentro da input que você deseja ver essas opções.
+            *Dentro da tag <strong>&lt;datalist&gt;, use as tags  &lt;option value=""</strong>&gt;  
+    
+
+        <strong>INPUT PARA DIGITAR TEXTO:</strong>
+        &lt;label for="imsg">Digite uma mensagem: &lt;/label&gt;
+        &lt;textarea name="msg" id="imsg" cols="50" rows="10"&gt;   &lt;/textarea&gt;
+            *Nesse exemplo, o atributo itpa abrir um caixa de texto onde o usuário poderá digitar textos.
+            *É parecido com aqueles campos de denúncias dos jogos, aonde você descreve um problema por meio de texto e envia um ticket ao suporte.
+
+            *ROWS é o tamanho das linhas, mas elas são infinitas, ok?
+            *COLS é o tamanho da largura da caixa de texto, quantas colunas ela vai ter. Quanto menor, menor o comprimento da caixa.
+
+    </pre>
+    </code>
+    </p>
+
+    <form action="" method="post">
+        <p>
+            <label for="Iestados">Selecione o estado que você mora: </label>
+            <select name="estados" id="Iestados">
+                <optgroup label="Região Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazônas</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BH">Bahia </option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+                <optgroup label="Região Centro-oeste">
+                    <option value="DF">Distrito Federal</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                    <option value="PR" selected>Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="ilista-de-profissao">Digite a sua profissão: </label>
+            <input type="text" name="lista-de-profissao" id="ilista-de-profissao" placeholder="Ex: Frentista" list="opcs-de-profissoes">
+            <datalist id="opcs-de-profissoes">
+                <option value="VAGABA">Vagabundo Desempregado</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="DO CORRE">Traficante</option>
+                <option value="OSZÓMI">Puliça</option>
+                <option value="ADM">Administrador</option>
+                <option value="MEI">Empreendedor</option>
+                <option value="NOÉ">Noé da sua conta</option>
+            </datalist>
+
+        </p>
+
+        <p>
+            <label for="imsg">Digite uma mensagem: </label> <br>
+            <textarea name="msg" id="imsg" cols="40" rows="10"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar tudo">
+        </p>
+    </form>
+
+</body>
+</html>
