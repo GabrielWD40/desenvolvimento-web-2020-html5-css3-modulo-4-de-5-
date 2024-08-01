@@ -9,6 +9,85 @@
     <title>OUTPUTS em HTML</title>
 </head>
 <body>
-    
+    <h1>Anotações osbre a aula: </h1>
+    <p>
+        O output(saída de dados), serve apenas para mostrar os dados, ele não soma e nem envia nada. Apenas mostra como as coisas estão.
+        <br>
+        oninput = quando eu entrar com dados nessa input faça tal coisa.
+        <br>
+        essa porra depende muito do java script, então você precisa saber JS. Não depende muito do HTML aqui e sim, da sua lógica com o JavaScript
+        <br>
+    </p>
+    <aside style="background-color: red; padding: 20px; color: black; margin-bottom: 5vh;">
+        <H2>LEMBRETE</H2>
+        <P><strong>
+            NÃO COLOQUE CARACTERES ESPECIAIS NESSA BOSTA, PORQUE VAI DAR ERRO. EU FIQUEI MÓ TEMPÃO CHECANDO E NEM ME LIGUEI NISSO. PUTA QUE PARIU, QUE ÓDIO.<br>
+            <mark>NOS CAMPOS DE IDS, NÃO COLOQUE ESPAÇOS, E NENHUM OUTRO CARACTER ESPECIAL. DA ERRO NESSA BOSTA!</mark>
+        </strong></P>
+    </aside>
+
+    <form action="" method="post" autocomplete="on">
+
+        <fieldset>
+            <legend>
+                1º EXEMPLO DE COMO FUNCIONAM OS OUTPUTS:
+            </legend>
+            <p>
+                <label for="inumero1">Digite o 1º valor: </label>
+                <input type="number" name="numero1" id="inumero1" required min="1" max="50"
+                oninput="iresultado.innerHTML = Number(numero1.value) + Number(numero2.value)">
+            </p>
+            <p>
+                <label for="inumero2">Digite o 2º valor: </label>
+                <input type="number" name="numero2" id="inumero2" required min="1" max="50"
+                oninput="iresultado.innerHTML = Number(numero1.value) + Number(numero2.value)">
+            </p>
+            <!-- EXIBINDO O RESULTADO DA SOMA DOS VALORES CAPTURADOS! -->
+            <p>
+                <label for="iresultado">O resultado dessa soma é = </label>
+                <output id="iresultado">digita ali, porra!</output>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>
+                EXEMPLO 2 DE SAÍDA DE DADOS COM OUTPUT:
+            </legend>
+            <p>
+                <label for="ivolume">Escolha o valor do volume:</label>
+                <input type="range" name="volume" id="ivolume" min="0" max="10" value="1"
+                oninput="ivalorDoVolume.innerHTML = Number(ivolume.value)">
+                <output style="background-color: lightblue; padding: 5px; font-weight: bolder;" id="ivalorDoVolume">1</output>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>
+                3º EXEMPLO DE COMO FUNCIONAM OS OUTPUTS:
+            </legend>
+            <p>
+                <label for="idatanascimento">Escolha o ano do seu nascimento: </label>
+                <input type="number" name="datanascimento" id="idatanascimento" min="1900" max="2024" required 
+                oninput="calcIdade()">
+            </p>
+            <p>
+                <label for="iidade">Sua idade é: </label>
+                <output id="iidade">0</output>
+            </p>
+        </fieldset>
+        
+        <!-- ENVIAR E RESETAR DADOS -->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar dados">
+        </p>
+    </form>
+    <script>
+        function calcIdade(){
+            let anoAtual = new Date().getFullYear()
+            iidade.innerHTML = Number(anoAtual) - Number(idatanascimento.value)
+        }
+    </script>
 </body>
+
 </html>
