@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+body{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: justify;
+    background-color: darkslategrey;
+
+}
+
+h1, p{
+    color: pink;
+}
+
+
+.texto{
+    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 192, 203, 0.150);
+}
+
+code, pre{
+    color: darkorange;
+}
+
+pre{
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.700);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+mark{
+    background-color: pink;
+    padding: 5px;
+    border-radius: 10px;
+}
